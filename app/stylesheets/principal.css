@@ -1,0 +1,25 @@
+
+/*Produce espacios 'imaginarios' entre los divs*/
+
+#imaginary_container{
+    margin-top:10%;
+}
+
+#imaginary_container2{
+    margin-top:20%;
+}
+
+/*CSS para la barra de búsqueda*/
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+	border-right:0;
+	box-shadow:0 0 0;
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
