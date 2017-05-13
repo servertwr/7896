@@ -1,0 +1,61 @@
+	1. Configurando y descargando el primer repositorio de Github
+
+Lo primero que hay que hacer es crear una cuenta en github.com y verificarla.
+
+Luego, en linux abren una terminal y configuran Git con estas dos líneas (lo sustituyen con lo que pusieron en su cuenta).
+
+	git config --global user.name "su usuario"
+	git config --global user.email su.correo@ejemplo.com
+
+Este es el repositorio:
+
+https://github.com/servertwr/7896.git
+
+Ahora, en la terminal de linux, se posicionan en donde quieran guardar el repositorio (Ej cd  /home/) e ingresan este comando.
+
+	git clone https://github.com/servertwr/7896.git
+
+Esto les descargará a su computadora el repositorio.
+
+	
+	2. Añadiendo archivos al repositorio
+
+La siguiente parte consiste en cómo añadir archivos al repositorio y descargarlos.
+
+Para ello necesito que me escriban los nombres de usuario con los que se registraron.
+
+De esa manera les envío un correo de invitación para poder ser colaboradores del repositorio.
+
+Una vez aceptada la invitación, en una terminal, se colocan en la carpeta raiz del repositorio e ingresan la línea:
+
+	git add *
+
+Con este comando añaden todos sus cambios (añadir archivos, modificar código) a su repositorio local (el de su computadora).
+
+Tambien pueden usar el comando "git add /carpetaEjemplo/programaEjemplo.c", para añadir o modificar archivos específicos.
+
+Al finalizar, ingresan el comando:
+
+	git commit -m "mensajeDeEjemplo"
+
+El comando add sirve para enviar camibios del Directorio de trabajo
+a una zona intermedia y el comando commit es para pasar los cambios de la zona intermedia a la "zona final", que es el repositorio local de su computadora.
+
+La bandera -m es de mensaje y sirve para que los demás usuarios sepan de lo que trata el commit; por ejemplo: "Añadidos los programas 4 y 5 de D.S."
+
+El commit solo almacena los cambios en sus computadoras. Ningún otro colaborador puede ver sus cambios. Para enviar sus cambios al repositorio remoto (él que está en internet) y que los demás puedan ver sus cambios, se ingresa en consola:
+
+	git push origin master
+
+Con este, todos los cambios realizados desde el último commit, son enviados al repositorio remoto de donde los demás colaboradores los pueden descargar.
+
+Para descargar los cambio realizados por los colaboradores se ingresa:
+
+	git pull
+
+Y para comprobar el estado del repositorio local es:
+
+	git status
+
+
+
