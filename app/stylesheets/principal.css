@@ -6,7 +6,11 @@
 }
 
 #imaginary_container2{
-    margin-top:20%;
+    margin-top:5%;
+}
+
+#imaginary_container3{
+    margin-top:30%;
 }
 
 /*CSS para la barra de búsqueda*/
@@ -22,4 +26,12 @@
 .stylish-input-group button{
     border:0;
     background:transparent;
+}
+
+.caja1{
+  margin-bottom: 40px;
+}
+
+.caja2{
+  margin-bottom: 30px;
 }
