@@ -1,3 +1,10 @@
+<?php
+  session_start();
+    include "DatabaseAccess/DAO.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,11 +21,11 @@
   <nav class="navbar navbar-center">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">TaCONNECTA</a>
+        <a class="navbar-brand" href="principal.php">TaCONNECTA</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Cambiar Dirección</a></li>
-        <li><a href="#">Iniciar Sesión / Regístrate</a></li>
+        <li><a href="entrar.php">Iniciar Sesión / Regístrate</a></li>
       </ul>
     </div>
   </nav>

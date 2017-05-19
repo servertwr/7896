@@ -1,3 +1,9 @@
+<?php
+  session_start();
+    include "DatabaseAccess/DAO.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +20,7 @@
   <nav class="navbar navbar-center">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">TaCONNECTA</a>
+        <a class="navbar-brand" href="principal.php">TaCONNECTA</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Ayuda</a></li>
@@ -37,69 +43,40 @@
   <div class="container">
     <div  class="row">
       <div class="col-sm-6">
-        <div class="panel panel-default">
-
-          <div class="caja1"><center>
-            <h4>¿Listo para iniciar con TaCONNECTA?</h4>
-            <h4>Crea tu cuenta</h4>
-          </center></div>
-
-          <form>
-
-            <div class="form-group col-lg-4">
-              <label for="nam">Nombre del titular:</label>
-              <input type="text" class="form-control" id="nam">
-            </div>
-
-            <div class="form-group col-lg-8">
-              <label for="sur">Nombre del local/Nombre de usuario:</label>
-              <input type="text" class="form-control" id="sur">
-            </div>
-
-            <div class="form-group col-lg-12">
-              <label for="email">Correo electrónico:</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-
-            <div class="form-group col-lg-12">
-              <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd">
-            </div>
-
-            <center>
-              <div class="col-sm-12">
-                <div class="checkbox">
-                  <label><input type="checkbox" name="remember"> Avisos de política y privacidad</label>
-                </div>
-              </div>
-            </center>
-            <center>
-              <button type="submit" class="btn btn-default">Registrarme como puesto</button>
-            </center>
-          </form>
+        <div class="panel panel-default"><center>
+          <div class="caja1"><h4>!Quiero registrarme!</h4></div>
+          <div class="caja1"><p><a href="registrarUsuario.php" class="btn btn-default">Regístrate como cliente</a></p></div>
+          <div class="caja1"><p><a href="registrarPuesto.php" class="btn btn-default">Regístrate como puesto</a></p></div>
           <div id="imaginary_container2"></div>
-        </div>
+        </center></div>
       </div>
+
 
       <div class="col-sm-4">
       </div>
 
       <div class="col-sm-6">
         <div class="panel panel-default">
-          <center>
-            <h4>¡Disfruta de TaCONNECTA!</h4>
-            <div id="imaginary_container"></div>
-            <h4>Elige para tu vida solo aquello que te hace bien...</h4>
-            <div id="imaginary_container"></div>
-            <h4>...alimentos, antojos y TaCONNECTA</h4>
-            <div id="imaginary_container"></div>
-          </center>
+          <div class="caja1"><center>
+            <h4>¡Ya estoy registrado!</h4>
+          </center></div>
+          <form action="session/login.php" method="POST">
+            <div class="form-group col-lg-12">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" class="form-control" name="correo">
+            </div>
+            <div class="form-group col-lg-12">
+              <label for="pwd">Contraseña:</label>
+              <input type="password" class="form-control" name="clave">
+            </div>
+            <center>
+              <input id="enviar" class="ButtonColor" type="submit" name="enviar" value="Iniciar sesión"></input>
+              <p><a href="#">He olvidado mi contraseña</a></p>
+            </center>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
-
-
 
 </body>

@@ -1,3 +1,9 @@
+<?php
+  session_start();
+    include "DatabaseAccess/DAO.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +20,7 @@
   <nav class="navbar navbar-center">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">TaCONNECTA</a>
+        <a class="navbar-brand" href="principal.php">TaCONNECTA</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Ayuda</a></li>
@@ -44,42 +50,37 @@
             <h4>Crea tu cuenta</h4>
           </center></div>
 
-          <form>
+          <form action="registro/regPuesto.php" method="POST">
 
-            <div class="form-group col-lg-3">
-              <label for="nam">Nombre:</label>
-              <input type="text" class="form-control" id="nam">
+            <div class="form-group col-lg-4">
+              <label>Nombre del titular:</label>
+              <input type="text" class="form-control" name="nombre"></input>
             </div>
 
-            <div class="form-group col-lg-3">
-              <label for="sur">Apellido:</label>
-              <input type="text" class="form-control" id="sur">
-            </div>
-
-            <div class="form-group col-lg-5">
-              <label for="usr">Nombre de usuario:</label>
-              <input type="text" class="form-control" id="usr">
+            <div class="form-group col-lg-8">
+              <label>Nombre del local/Nombre de usuario:</label>
+              <input type="text" class="form-control" name="puesto"></input>
             </div>
 
             <div class="form-group col-lg-12">
-              <label for="email">Correo electrónico:</label>
-              <input type="email" class="form-control" id="email">
+              <label>Correo electrónico:</label>
+              <input type="email" class="form-control" name="correo"></input>
             </div>
 
             <div class="form-group col-lg-12">
-              <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd">
+              <label>Contraseña:</label>
+              <input type="password" class="form-control" name="clave"></input>
             </div>
 
             <center>
               <div class="col-sm-12">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="remember"> Avisos de política y privacidad</label>
+                  <label><input type="checkbox" name="remember"> Avisos de política y privacidad</input></label>
                 </div>
               </div>
             </center>
             <center>
-              <button type="submit" class="btn btn-default">Registrarme como cliente</button>
+            <input id="enviar" class="ButtonColor" type="submit" name="enviar" value="Registrarme como puesto"></input>
             </center>
           </form>
           <div id="imaginary_container2"></div>
