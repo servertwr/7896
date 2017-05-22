@@ -2,6 +2,13 @@
   session_start();
     include "DatabaseAccess/DAO.php";
 
+    if(isset($_SESSION['User'])){
+      header("Location: session/cliente/principalCliente.php");
+  	}
+    if(isset($_SESSION['Puesto'])){
+      header("Location: session/puesto/principalPuesto.php");
+  	}
+
 ?>
 
 

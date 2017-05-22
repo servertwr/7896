@@ -13,6 +13,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#div1").click(function(){
+            $(this).hide();
+        });
+    });
+  </script>
   <link rel="stylesheet" type="text/css" href="../stylesheets/principal.css">
 </head>
 <body>
@@ -49,6 +57,14 @@
           <div class="caja1"><p><a href="registrarPuesto.php" class="btn btn-default">Regístrate como puesto</a></p></div>
           <div id="imaginary_container2"></div>
         </center></div>
+
+        <div id="imaginary_container2">
+        <?php
+              if ( isset($_GET['error']) && $_GET['error'] == 1 ){
+                echo "<p id='div1' style='color:#9000A1'>El correo o la contraseña ingresados no son correctos</p>";
+              }
+        ?>
+        </div>
       </div>
 
 
@@ -78,5 +94,7 @@
       </div>
     </div>
   </div>
+
+
 
 </body>
