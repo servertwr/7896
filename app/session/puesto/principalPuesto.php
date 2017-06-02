@@ -6,6 +6,7 @@
 	}else{											//el else es esencial... casi parece que no fueron a clase
 	   $puesto = unserialize($_SESSION['Puesto']);
   }
+
 ?>
 
 
@@ -18,6 +19,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#div1").click(function(){
+            $(this).hide();
+        });
+    });
+  </script>
   <link rel="stylesheet" type="text/css" href="../stylesheets/principal.css">
 </head>
 <body>
@@ -46,6 +54,49 @@
                               echo $nombre;
                             ?></div>
       </center></font>
+    </div>
+  </div>
+
+  <div class="container">
+    <div  class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+
+          <div class="caja1"><center>
+            <h4>Reseñas y comentarios</h4>
+          </center></div>
+
+          <div id="imaginary_container2"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <center>
+            <h4>Calificación actual: 4.8</h4>
+            <div id="imaginary_container"></div>
+            <h4>¡Siempre puedes mejorar!</h4>
+            <div id="imaginary_container"></div>
+            <h4>Actualiza tu datos para que más gente te conozca</h4>
+            <div id="imaginary_container"></div>
+            <form method="get" action="formularioPuesto.php">
+                <button type="submit">¡Actualizar mis datos!</button>
+            </form>
+            <!--h4><button type="button" class="btn">¡Actualizar mis datos!</button></h4-->
+            <div id="imaginary_container"></div>
+          </center>
+        </div>
+        <div id="imaginary_container2">
+        <?php
+              if ( isset($_GET['succes']) && $_GET['succes'] == 1 ){
+                echo "<p id='div1' style='color:#9000A1'>Actualización de datos exitosa</p>";
+              }
+        ?>
+        </div>
+      </div>
     </div>
   </div>
 

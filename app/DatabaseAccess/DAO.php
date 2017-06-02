@@ -36,6 +36,35 @@
 
   }
 
+  class DAOTraer{
+    static function categorias($conexion){
+      $consulta = $conexion->query("select idCategoria, nombreCat  from Categoria");
+			$bebida = array();
+			$i=0;
+			foreach($consulta as $bebidas){
+                $bebida[$i] = $bebidas;
+                $i++;
+      }
+      return $bebida;
+    }
+
+    static function subCategorias($conexion, $idCategoria){
+      //echo "Entrando a subtafdsd $idCategoria";
+      $consulta = $conexion->query("select idSubCategoria, nombreSub, idCat  from SubCategoria where idCat = {$idCategoria}");
+			$bebida = array();
+			$i=0;
+			foreach($consulta as $bebidas){
+                $bebida[$i] = $bebidas;
+                $i++;
+      }
+      return $bebida;
+      //return 1;
+    }
+  }
+
+
+
+
   class DAOTraerCliente{
     static function informacionPerfil($conexion, $id){
       $sql = "select idUsuario, nombre, apellido, correo, usuario from Cliente where idUsuario = '$id'";
@@ -144,7 +173,7 @@
     public function setcorreo($correo){$this->correo = $correo;}
 
 
-    public function getIdPuesto(){return $this->IdPuesto;}
+    public function getIdPuesto(){return $this->idPuesto;}
     public function getnPuesto(){return $this->nPuesto;}
     public function getnResponsable(){return $this->nResponsable;}
     public function gethorario(){return $this->horario;}

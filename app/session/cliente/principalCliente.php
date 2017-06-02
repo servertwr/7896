@@ -27,6 +27,15 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="../../principal.php">TaCONNECTA</a>
       </div>
+      <ul class="nav navbar-nav ">
+        <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li><a href="#">Mi cuenta</a></li>
+        <li><a href="#">Mis direcciones</a></li>
+        <li><a href="#">Mis calificaciones</a></li>
+        <li><a href="#">Mis pedidos</a></li>
+        <li><a href="#">Mi lista</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Cambiar Dirección</a></li>
         <li><a href="../logout.php">Cerrar sesión</a></li>
@@ -46,6 +55,25 @@
                               echo $nombre;
                             ?></div>
       </center></font>
+    </div>
+    <div class="panel panel-default">
+      <p>CATALOGO</p>
+      <div id="catalogo">
+        <p class="categoria">Ranking</p>
+        <div id="ranking" class="catalogo"></div>
+
+        <p class="categoria">Preferencias</p>
+        <div id="preferencias" class="catalogo"></div>
+
+        <p class="categoria">Alimentos</p>
+        <div id="alimentos" class="catalogo"></div>
+
+        <p class="categoria">Añadidos recientemene</p>
+        <div id="reciente" class="catalogo"></div>
+
+        <p class="categoria">Nuestras sugerencias</p>
+        <div id="sugerencias" class="catalogo"></div>
+      </div>
     </div>
   </div>
 

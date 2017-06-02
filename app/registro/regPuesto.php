@@ -25,7 +25,7 @@
 
       $ejecucion = $con->query($sql);
       $resEjecucion = $ejecucion -> fetch_assoc();
-      $id = $resEjecucion["idUsuario"];;
+      $id = $resEjecucion["idUsuario"];
 
       if($id > 0){
         DAOConexion::cerrar($con);

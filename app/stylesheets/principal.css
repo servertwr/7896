@@ -35,3 +35,10 @@
 .caja2{
   margin-bottom: 30px;
 }
+
+div#nav{
+  text-align: center;
+}
+div#nav ul{
+  display: inline-block;
+}
