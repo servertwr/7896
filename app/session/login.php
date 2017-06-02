@@ -45,7 +45,7 @@
           }else{
             echo "<h1>Parace que el usuario no está registrado en la tabla Puesto</h1>";
             DAOConexion::cerrar($con);
-            header("Location: ../entrar.php?succes=1");
+            header("Location: ../entrar.php?error=1");
           }
         }
       }

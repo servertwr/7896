@@ -1,6 +1,6 @@
 INSERT INTO Cliente (nombre, apellido, usuario, correo, contrasena)
 VALUES
-('Emilio', 'Monroy', 'monroyhdze@gmail.com', '12345'),
+('Emilio', 'Monroy', 'monroyhdze', 'monroyhdze@gmail.com', '12345'),
 ('Isabel', 'Gutiérrez', 'isagut', 'isagut@hotmail.com', '12345'),
 ('Marco', 'Perez', 'elregente', 'elregente@gmail.com', '12345'),
 ('Ofelia', 'Danoise', 'ofdanoise', 'inverno13@outlook.com', 'lanovia'),
